@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/TextChat.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot-voip/icons/microphone-icon-clip-art-98718.png" type="Texture" id=2]
+
+[node name="TextChat" type="Control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+margin_top = 576.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakButton" type="TextureButton" parent="."]
+margin_left = 951.24
+margin_top = 511.528
+margin_right = 1004.24
+margin_bottom = 557.528
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SpeakButton" to="." method="_on_TextureButton_pressed"]
